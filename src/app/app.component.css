@@ -1,0 +1,9 @@
+.example-container {
+  padding-top: 60px;
+    width: 90%;
+    height: 80%;
+  }
+  
+  h1 {
+    text-align: center;
+  }

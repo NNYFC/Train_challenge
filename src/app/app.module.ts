@@ -3,14 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { LayoutModule } from './layout/layout.module';
+import { RoutesModule } from './routes/routes.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    LayoutModule,
+    RoutesModule,
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
