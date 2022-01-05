@@ -1,0 +1,14 @@
+<div class="top-contain">
+    <h2>Routes Patterns Stop List </h2>
+    <app-button color="" text="Back"></app-button>
+</div>
+
+<div class="main-content">
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let listRoutesPattern of listRoutesPatterns"> 
+                <a [routerLink]="['predictDeparture',listRoutesPattern.id]">
+                    {{ listRoutesPattern.attributes.name}}
+               </a>
+        </mat-list-item>
+    </mat-list>
+</div>

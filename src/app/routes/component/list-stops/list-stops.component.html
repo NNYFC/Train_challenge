@@ -1,0 +1,26 @@
+<div class="top-contain">
+  <h2>List of Stops</h2>
+  <app-button color="" text="Back"></app-button>
+</div>
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Municipality</th>
+        <th>Description</th>
+      </tr>
+
+      <tr *ngFor="let listStop of listStops">
+        <td> 
+            <a [routerLink]="['viewRoutespatterns',listStop.id]">
+                {{ listStop.attributes.name}}     
+            </a>
+        </td>
+        <td>{{ listStop.attributes.address }}</td>
+        <td>{{ listStop.attributes.municipality }}</td>
+        <td>{{ listStop.attributes.description }}</td>
+      </tr>
+
+    </table>
+  </div>

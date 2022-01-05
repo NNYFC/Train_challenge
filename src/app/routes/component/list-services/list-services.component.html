@@ -1,0 +1,22 @@
+<h2>List of Route Services</h2>
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Description</th>
+        <th>Rating description</th> 
+        <th>Rating start date</th>
+        <th>Rating end date</th>
+        <th>added dates notes</th>
+      </tr>
+
+      <tr *ngFor="let listService of listServices">
+        <td>{{ listService.attributes.description }}</td>
+        <td>{{ listService.attributes.rating_description }}</td>
+        <td>{{ listService.attributes.rating_start_date}}</td>
+        <td> {{ listService.attributes.rating_end_date}} </td>
+        <td>{{ listService.attributes.added_dates_notes }}</td>
+        <td></td>
+      </tr>
+
+    </table>
+  </div>

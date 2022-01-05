@@ -1,0 +1,13 @@
+<div class="top-contain">
+    <h2>Predicted Departure</h2>
+    <app-button color="" text="Back"><a [routerLink]="['viewRoutespatterns']" href="viewRoutespatterns"></a></app-button>
+</div>
+<div class="main-content">
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let listPredict of listPredict"> 
+                <ul [routerLink]="['viewRoutespatterns',listPredict.id]">
+                    <li>{{ listPredict.attributes.departure_time}}</li>
+                </ul>  
+        </mat-list-item>
+    </mat-list>
+</div>

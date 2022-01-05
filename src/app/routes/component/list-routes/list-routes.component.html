@@ -1,0 +1,30 @@
+<div style="overflow-x:auto;">
+    <table>
+      <tr>
+        <th>Color</th>
+        <th>Description</th>
+        <th>Destinations</th>
+        <th>Type</th> 
+        <th>Direction name</th>
+      </tr>
+
+      <tr *ngFor="let listRoute of listRoutes">
+        <td> 
+            <a [routerLink]="['viewStops',listRoute.id]">
+            {{ listRoute.attributes.color }}  
+            </a>
+        </td>
+        <td>{{ listRoute.attributes.description }}</td>
+        <td>{{ listRoute.attributes.direction_destinations }}</td>
+        <td>{{ listRoute.attributes.type }}</td>
+        <td>{{ listRoute.attributes.direction_names }}</td>
+        <td>
+            <a class="action-link" [routerLink]="['viewServices',listRoute.id]">
+                View Service
+            </a>
+        </td>
+        <td></td>
+      </tr>
+
+    </table>
+  </div>
